@@ -1,0 +1,429 @@
+id,source,severity,opened,due,closed,owner
+F-0001,Bug report,Medium,2025-11-26,2026-02-24,2026-02-05,Head of IT
+F-0002,Internal audit,Medium,2025-11-02,2026-01-31,2026-04-06,HR Director
+F-0003,Penetration test,High,2025-11-28,2025-12-28,2025-12-08,CISO
+F-0004,Penetration test,Medium,2025-11-04,2026-02-02,2026-01-03,Engineering Lead
+F-0005,Penetration test,Medium,2025-11-26,2026-02-24,2026-06-19,CISO
+F-0006,Internal audit,High,2025-11-18,2025-12-18,2026-01-02,Engineering Lead
+F-0007,Penetration test,Medium,2025-11-10,2026-02-08,2026-05-30,Procurement Lead
+F-0008,Bug report,Medium,2025-11-21,2026-02-19,2026-01-16,HR Director
+F-0009,Bug report,Medium,2025-11-19,2026-02-17,2026-06-14,Procurement Lead
+F-0010,Penetration test,High,2025-11-15,2025-12-15,2025-12-04,Engineering Lead
+F-0011,Bug report,High,2025-11-26,2025-12-26,2025-12-10,CISO
+F-0012,Bug report,High,2025-11-03,2025-12-03,2025-11-22,IT Operations Lead
+F-0013,Internal audit,Medium,2025-11-09,2026-02-07,2025-12-06,IT Operations Lead
+F-0014,Vulnerability scan,Medium,2025-11-07,2026-02-05,2026-01-25,Procurement Lead
+F-0015,Internal audit,High,2025-11-23,2025-12-23,2025-12-18,IT Operations Lead
+F-0016,Internal audit,Medium,2025-11-04,2026-02-02,2025-12-12,Head of IT
+F-0017,Vulnerability scan,Medium,2025-11-16,2026-02-14,2025-12-23,IT Operations Lead
+F-0018,Bug report,Medium,2025-11-26,2026-02-24,2026-05-29,IT Operations Lead
+F-0019,Vulnerability scan,High,2025-11-07,2025-12-07,2026-01-19,CISO
+F-0020,Internal audit,High,2025-11-11,2025-12-11,2025-12-09,IT Operations Lead
+F-0021,Bug report,High,2025-11-26,2025-12-26,2026-01-13,Engineering Lead
+F-0022,Bug report,Medium,2025-11-05,2026-02-03,2026-01-12,Head of IT
+F-0023,Vulnerability scan,Medium,2025-11-09,2026-02-07,2026-01-24,IT Operations Lead
+F-0024,Internal audit,High,2025-11-25,2025-12-25,2025-12-17,CISO
+F-0025,Penetration test,Medium,2025-11-21,2026-02-19,2026-01-26,HR Director
+F-0026,Bug report,Medium,2025-11-02,2026-01-31,2026-01-17,HR Director
+F-0027,Internal audit,Medium,2025-11-24,2026-02-22,2026-04-24,Head of IT
+F-0028,Bug report,Medium,2025-11-17,2026-02-15,2025-12-25,IT Operations Lead
+F-0029,Bug report,Medium,2025-11-17,2026-02-15,2026-04-17,Head of IT
+F-0030,Bug report,Medium,2025-11-24,2026-02-22,2026-01-03,Head of IT
+F-0031,Bug report,Medium,2025-11-18,2026-02-16,2025-12-29,Head of IT
+F-0032,Internal audit,Medium,2025-11-11,2026-02-09,2026-07-20,Head of IT
+F-0033,Penetration test,Critical,2025-11-12,2025-11-19,2025-11-16,HR Director
+F-0034,Penetration test,Medium,2025-11-28,2026-02-26,2026-07-25,Engineering Lead
+F-0035,Penetration test,Critical,2025-11-20,2025-11-27,2025-12-06,Engineering Lead
+F-0036,Vulnerability scan,High,2025-11-21,2025-12-21,2026-02-03,HR Director
+F-0037,Bug report,High,2025-11-04,2025-12-04,2025-11-28,Head of IT
+F-0038,Vulnerability scan,High,2025-11-28,2025-12-28,2026-01-09,IT Operations Lead
+F-0039,Internal audit,High,2025-11-09,2025-12-09,2026-01-11,Engineering Lead
+F-0040,Bug report,Medium,2025-12-25,2026-03-25,2026-07-04,HR Director
+F-0041,Vulnerability scan,Medium,2025-12-25,2026-03-25,2026-06-07,CISO
+F-0042,Penetration test,Medium,2025-12-27,2026-03-27,2026-06-16,IT Operations Lead
+F-0043,Penetration test,Medium,2025-12-03,2026-03-03,2026-02-17,Engineering Lead
+F-0044,Vulnerability scan,Critical,2025-12-17,2025-12-24,2025-12-22,IT Operations Lead
+F-0045,Vulnerability scan,High,2025-12-23,2026-01-22,2026-02-02,IT Operations Lead
+F-0046,Bug report,High,2025-12-03,2026-01-02,2026-02-10,CISO
+F-0047,Bug report,Medium,2025-12-23,2026-03-23,2026-05-25,Procurement Lead
+F-0048,Bug report,Medium,2025-12-15,2026-03-15,2026-02-27,HR Director
+F-0049,Internal audit,Medium,2025-12-02,2026-03-02,2026-07-10,Head of IT
+F-0050,Internal audit,Medium,2025-12-01,2026-03-01,2026-02-12,Head of IT
+F-0051,Bug report,Medium,2025-12-14,2026-03-14,2026-01-07,IT Operations Lead
+F-0052,Vulnerability scan,Medium,2025-12-15,2026-03-15,2026-02-23,Head of IT
+F-0053,Bug report,Medium,2025-12-22,2026-03-22,2026-08-11,CISO
+F-0054,Internal audit,High,2025-12-15,2026-01-14,2026-01-17,IT Operations Lead
+F-0055,Vulnerability scan,Medium,2025-12-06,2026-03-06,2026-07-13,Head of IT
+F-0056,Bug report,Critical,2025-12-21,2025-12-28,2026-01-01,IT Operations Lead
+F-0057,Internal audit,High,2025-12-06,2026-01-05,2025-12-13,HR Director
+F-0058,Vulnerability scan,Medium,2025-12-14,2026-03-14,2026-01-16,HR Director
+F-0059,Internal audit,Medium,2025-12-11,2026-03-11,2026-06-02,HR Director
+F-0060,Vulnerability scan,High,2025-12-09,2026-01-08,2026-02-10,HR Director
+F-0061,Bug report,Critical,2025-12-05,2025-12-12,2025-12-18,HR Director
+F-0062,Vulnerability scan,Medium,2025-12-20,2026-03-20,2026-05-24,CISO
+F-0063,Bug report,High,2025-12-18,2026-01-17,2026-02-07,Procurement Lead
+F-0064,Internal audit,High,2025-12-09,2026-01-08,2026-01-03,IT Operations Lead
+F-0065,Vulnerability scan,Medium,2025-12-02,2026-03-02,2026-01-04,Procurement Lead
+F-0066,Vulnerability scan,High,2025-12-08,2026-01-07,2026-02-22,Head of IT
+F-0067,Penetration test,Medium,2025-12-26,2026-03-26,2026-04-08,IT Operations Lead
+F-0068,Internal audit,Medium,2025-12-23,2026-03-23,2026-03-12,IT Operations Lead
+F-0069,Vulnerability scan,Medium,2025-12-21,2026-03-21,2026-05-19,IT Operations Lead
+F-0070,Vulnerability scan,High,2025-12-07,2026-01-06,2026-01-02,IT Operations Lead
+F-0071,Internal audit,High,2025-12-25,2026-01-24,2026-02-18,Engineering Lead
+F-0072,Bug report,Medium,2025-12-17,2026-03-17,2026-03-29,Engineering Lead
+F-0073,Penetration test,Medium,2025-12-04,2026-03-04,2026-03-18,Engineering Lead
+F-0074,Internal audit,Critical,2025-12-21,2025-12-28,2025-12-26,Head of IT
+F-0075,Vulnerability scan,Medium,2026-01-18,2026-04-18,2026-05-09,CISO
+F-0076,Internal audit,Medium,2026-01-21,2026-04-21,2026-02-11,IT Operations Lead
+F-0077,Vulnerability scan,High,2026-01-09,2026-02-08,2026-03-18,Engineering Lead
+F-0078,Bug report,Medium,2026-01-13,2026-04-13,2026-03-01,HR Director
+F-0079,Penetration test,High,2026-01-03,2026-02-02,2026-01-21,CISO
+F-0080,Vulnerability scan,Critical,2026-01-22,2026-01-29,2026-01-26,Head of IT
+F-0081,Penetration test,High,2026-01-06,2026-02-05,2026-03-29,Engineering Lead
+F-0082,Bug report,Critical,2026-01-12,2026-01-19,2026-01-23,IT Operations Lead
+F-0083,Vulnerability scan,Medium,2026-01-22,2026-04-22,2026-02-17,CISO
+F-0084,Internal audit,Medium,2026-01-09,2026-04-09,2026-09-11,IT Operations Lead
+F-0085,Penetration test,Medium,2026-01-26,2026-04-26,2026-08-26,Engineering Lead
+F-0086,Internal audit,High,2026-01-14,2026-02-13,2026-03-23,IT Operations Lead
+F-0087,Bug report,High,2026-01-07,2026-02-06,2026-03-26,Procurement Lead
+F-0088,Penetration test,High,2026-01-20,2026-02-19,2026-01-30,Head of IT
+F-0089,Vulnerability scan,Medium,2026-01-24,2026-04-24,2026-08-31,IT Operations Lead
+F-0090,Penetration test,Medium,2026-01-14,2026-04-14,2026-02-26,Head of IT
+F-0091,Internal audit,Medium,2026-01-14,2026-04-14,2026-06-29,IT Operations Lead
+F-0092,Internal audit,Medium,2026-01-19,2026-04-19,2026-05-18,CISO
+F-0093,Vulnerability scan,Medium,2026-01-14,2026-04-14,2026-02-27,Procurement Lead
+F-0094,Vulnerability scan,High,2026-01-06,2026-02-05,2026-02-10,IT Operations Lead
+F-0095,Vulnerability scan,High,2026-01-24,2026-02-23,2026-02-11,IT Operations Lead
+F-0096,Vulnerability scan,Critical,2026-01-17,2026-01-24,2026-01-19,Head of IT
+F-0097,Internal audit,High,2026-01-08,2026-02-07,2026-02-01,Procurement Lead
+F-0098,Penetration test,Medium,2026-01-13,2026-04-13,2026-07-23,Head of IT
+F-0099,Penetration test,Medium,2026-01-21,2026-04-21,2026-05-31,CISO
+F-0100,Vulnerability scan,Medium,2026-01-01,2026-04-01,2026-03-10,HR Director
+F-0101,Bug report,Medium,2026-01-13,2026-04-13,2026-03-15,CISO
+F-0102,Vulnerability scan,High,2026-01-04,2026-02-03,2026-02-19,Engineering Lead
+F-0103,Penetration test,Medium,2026-01-13,2026-04-13,2026-08-02,IT Operations Lead
+F-0104,Penetration test,Medium,2026-01-27,2026-04-27,2026-03-04,Engineering Lead
+F-0105,Bug report,High,2026-01-17,2026-02-16,2026-02-06,Procurement Lead
+F-0106,Bug report,Medium,2026-01-17,2026-04-17,2026-07-18,Procurement Lead
+F-0107,Bug report,Medium,2026-01-23,2026-04-23,2026-09-23,Engineering Lead
+F-0108,Internal audit,Medium,2026-01-10,2026-04-10,2026-02-10,Engineering Lead
+F-0109,Penetration test,Medium,2026-01-20,2026-04-20,2026-09-13,HR Director
+F-0110,Penetration test,High,2026-01-07,2026-02-06,2026-02-28,IT Operations Lead
+F-0111,Bug report,High,2026-01-17,2026-02-16,2026-01-23,Procurement Lead
+F-0112,Vulnerability scan,Critical,2026-01-14,2026-01-21,2026-01-30,Head of IT
+F-0113,Internal audit,Medium,2026-01-27,2026-04-27,2026-03-14,Procurement Lead
+F-0114,Internal audit,High,2026-02-07,2026-03-09,2026-04-02,Engineering Lead
+F-0115,Penetration test,Medium,2026-02-06,2026-05-07,2026-04-15,CISO
+F-0116,Vulnerability scan,Medium,2026-02-20,2026-05-21,2026-03-21,Engineering Lead
+F-0117,Penetration test,High,2026-02-04,2026-03-06,2026-02-20,HR Director
+F-0118,Bug report,Medium,2026-02-19,2026-05-20,2026-07-19,Head of IT
+F-0119,Vulnerability scan,Medium,2026-02-20,2026-05-21,2026-07-29,Procurement Lead
+F-0120,Vulnerability scan,Medium,2026-02-02,2026-05-03,2026-06-09,Head of IT
+F-0121,Bug report,Medium,2026-02-02,2026-05-03,2026-03-29,CISO
+F-0122,Vulnerability scan,Critical,2026-02-02,2026-02-09,2026-02-07,Head of IT
+F-0123,Internal audit,High,2026-02-13,2026-03-15,2026-05-03,Procurement Lead
+F-0124,Internal audit,Medium,2026-02-17,2026-05-18,2026-08-13,Procurement Lead
+F-0125,Penetration test,Medium,2026-02-14,2026-05-15,2026-09-28,CISO
+F-0126,Vulnerability scan,Medium,2026-02-14,2026-05-15,2026-03-09,Engineering Lead
+F-0127,Internal audit,Medium,2026-02-20,2026-05-21,2026-03-27,CISO
+F-0128,Bug report,High,2026-02-23,2026-03-25,2026-04-06,HR Director
+F-0129,Penetration test,Medium,2026-02-07,2026-05-08,2026-10-11,Engineering Lead
+F-0130,Penetration test,Medium,2026-02-23,2026-05-24,2026-06-02,Procurement Lead
+F-0131,Vulnerability scan,Medium,2026-02-09,2026-05-10,2026-03-30,Head of IT
+F-0132,Bug report,High,2026-02-05,2026-03-07,2026-02-19,Head of IT
+F-0133,Vulnerability scan,Medium,2026-02-14,2026-05-15,2026-07-26,Head of IT
+F-0134,Penetration test,High,2026-02-12,2026-03-14,2026-04-19,Head of IT
+F-0135,Internal audit,High,2026-02-27,2026-03-29,2026-03-16,Procurement Lead
+F-0136,Penetration test,High,2026-02-20,2026-03-22,2026-03-19,IT Operations Lead
+F-0137,Vulnerability scan,High,2026-02-18,2026-03-20,2026-03-11,Head of IT
+F-0138,Internal audit,Medium,2026-02-21,2026-05-22,2026-10-24,Head of IT
+F-0139,Bug report,High,2026-02-24,2026-03-26,2026-05-10,Procurement Lead
+F-0140,Internal audit,High,2026-02-20,2026-03-22,2026-04-23,Engineering Lead
+F-0141,Bug report,Critical,2026-02-09,2026-02-16,2026-02-27,IT Operations Lead
+F-0142,Vulnerability scan,Medium,2026-02-18,2026-05-19,2026-03-19,CISO
+F-0143,Internal audit,Medium,2026-02-20,2026-05-21,2026-08-30,Procurement Lead
+F-0144,Bug report,Medium,2026-02-11,2026-05-12,2026-06-08,Procurement Lead
+F-0145,Penetration test,Medium,2026-02-17,2026-05-18,2026-09-09,Head of IT
+F-0146,Penetration test,Medium,2026-02-03,2026-05-04,2026-08-26,HR Director
+F-0147,Internal audit,Medium,2026-02-13,2026-05-14,2026-04-26,CISO
+F-0148,Vulnerability scan,Medium,2026-02-04,2026-05-05,2026-03-12,Procurement Lead
+F-0149,Internal audit,High,2026-02-22,2026-03-24,2026-03-01,Head of IT
+F-0150,Penetration test,High,2026-03-26,2026-04-25,2026-04-22,HR Director
+F-0151,Internal audit,High,2026-03-01,2026-03-31,2026-03-20,Procurement Lead
+F-0152,Vulnerability scan,Critical,2026-03-20,2026-03-27,2026-03-21,Procurement Lead
+F-0153,Bug report,Medium,2026-03-05,2026-06-03,2026-04-12,HR Director
+F-0154,Internal audit,Medium,2026-03-05,2026-06-03,2026-03-28,Procurement Lead
+F-0155,Internal audit,High,2026-03-06,2026-04-05,2026-05-27,Head of IT
+F-0156,Penetration test,High,2026-03-23,2026-04-22,2026-06-13,Engineering Lead
+F-0157,Internal audit,High,2026-03-21,2026-04-20,2026-05-07,HR Director
+F-0158,Bug report,Medium,2026-03-18,2026-06-16,2026-08-28,HR Director
+F-0159,Internal audit,High,2026-03-14,2026-04-13,2026-04-09,IT Operations Lead
+F-0160,Bug report,High,2026-03-05,2026-04-04,2026-04-09,HR Director
+F-0161,Vulnerability scan,High,2026-03-07,2026-04-06,2026-03-29,IT Operations Lead
+F-0162,Internal audit,Critical,2026-03-25,2026-04-01,2026-04-10,Head of IT
+F-0163,Internal audit,Critical,2026-03-03,2026-03-10,2026-03-09,Head of IT
+F-0164,Penetration test,High,2026-03-17,2026-04-16,2026-05-16,IT Operations Lead
+F-0165,Bug report,Medium,2026-03-18,2026-06-16,2026-05-17,IT Operations Lead
+F-0166,Vulnerability scan,High,2026-03-07,2026-04-06,2026-05-28,Head of IT
+F-0167,Bug report,Medium,2026-03-21,2026-06-19,2026-07-11,IT Operations Lead
+F-0168,Bug report,High,2026-03-14,2026-04-13,2026-04-02,Engineering Lead
+F-0169,Internal audit,Medium,2026-03-20,2026-06-18,2026-04-07,Engineering Lead
+F-0170,Vulnerability scan,Critical,2026-03-12,2026-03-19,2026-03-16,Engineering Lead
+F-0171,Vulnerability scan,High,2026-03-17,2026-04-16,2026-03-30,CISO
+F-0172,Internal audit,High,2026-03-19,2026-04-18,2026-03-28,Procurement Lead
+F-0173,Vulnerability scan,Medium,2026-03-19,2026-06-17,2026-04-23,Engineering Lead
+F-0174,Bug report,Medium,2026-03-17,2026-06-15,2026-08-20,HR Director
+F-0175,Internal audit,Critical,2026-03-28,2026-04-04,2026-04-06,Head of IT
+F-0176,Internal audit,Medium,2026-03-17,2026-06-15,2026-04-17,CISO
+F-0177,Internal audit,High,2026-03-26,2026-04-25,2026-04-19,Engineering Lead
+F-0178,Internal audit,Medium,2026-03-22,2026-06-20,,CISO
+F-0179,Vulnerability scan,Medium,2026-03-24,2026-06-22,2026-05-29,Head of IT
+F-0180,Penetration test,Medium,2026-03-09,2026-06-07,2026-09-08,Engineering Lead
+F-0181,Bug report,High,2026-03-03,2026-04-02,2026-03-09,IT Operations Lead
+F-0182,Internal audit,Medium,2026-03-11,2026-06-09,2026-05-09,HR Director
+F-0183,Internal audit,High,2026-03-10,2026-04-09,2026-04-06,Head of IT
+F-0184,Bug report,High,2026-03-21,2026-04-20,2026-06-07,IT Operations Lead
+F-0185,Internal audit,High,2026-03-03,2026-04-02,2026-03-17,Engineering Lead
+F-0186,Bug report,Medium,2026-03-11,2026-06-09,2026-06-24,HR Director
+F-0187,Vulnerability scan,Medium,2026-03-08,2026-06-06,,CISO
+F-0188,Vulnerability scan,Critical,2026-03-05,2026-03-12,2026-03-18,IT Operations Lead
+F-0189,Penetration test,Critical,2026-03-15,2026-03-22,2026-03-19,Head of IT
+F-0190,Bug report,Medium,2026-04-04,2026-07-03,2026-10-09,IT Operations Lead
+F-0191,Internal audit,High,2026-04-23,2026-05-23,2026-06-09,HR Director
+F-0192,Vulnerability scan,Medium,2026-04-19,2026-07-18,2026-05-29,HR Director
+F-0193,Internal audit,Medium,2026-04-26,2026-07-25,2026-10-31,CISO
+F-0194,Penetration test,High,2026-04-19,2026-05-19,2026-05-16,Head of IT
+F-0195,Vulnerability scan,Critical,2026-04-02,2026-04-09,2026-04-07,Head of IT
+F-0196,Internal audit,Medium,2026-04-12,2026-07-11,2026-06-10,CISO
+F-0197,Bug report,Critical,2026-04-11,2026-04-18,2026-04-23,Head of IT
+F-0198,Penetration test,High,2026-04-21,2026-05-21,2026-05-17,Head of IT
+F-0199,Internal audit,Medium,2026-04-15,2026-07-14,2026-05-06,CISO
+F-0200,Penetration test,Medium,2026-04-26,2026-07-25,2026-07-06,HR Director
+F-0201,Penetration test,Medium,2026-04-27,2026-07-26,2026-06-12,IT Operations Lead
+F-0202,Internal audit,Medium,2026-04-22,2026-07-21,2026-06-24,Head of IT
+F-0203,Internal audit,High,2026-04-19,2026-05-19,2026-06-16,HR Director
+F-0204,Bug report,Medium,2026-04-11,2026-07-10,,Engineering Lead
+F-0205,Internal audit,Critical,2026-04-08,2026-04-15,2026-04-21,CISO
+F-0206,Vulnerability scan,High,2026-04-15,2026-05-15,2026-05-01,Procurement Lead
+F-0207,Internal audit,High,2026-04-04,2026-05-04,2026-04-27,Procurement Lead
+F-0208,Vulnerability scan,Medium,2026-04-25,2026-07-24,2026-06-03,Procurement Lead
+F-0209,Bug report,Medium,2026-04-17,2026-07-16,2026-05-07,Procurement Lead
+F-0210,Vulnerability scan,Medium,2026-04-20,2026-07-19,2026-08-08,Engineering Lead
+F-0211,Bug report,Medium,2026-04-27,2026-07-26,2026-06-15,CISO
+F-0212,Vulnerability scan,Critical,2026-04-27,2026-05-04,2026-04-30,IT Operations Lead
+F-0213,Vulnerability scan,Medium,2026-04-06,2026-07-05,2026-06-03,IT Operations Lead
+F-0214,Penetration test,Medium,2026-04-04,2026-07-03,2026-04-29,Head of IT
+F-0215,Bug report,Medium,2026-04-09,2026-07-08,2026-05-23,Procurement Lead
+F-0216,Bug report,Medium,2026-04-12,2026-07-11,,Procurement Lead
+F-0217,Internal audit,Medium,2026-04-04,2026-07-03,2026-05-02,Engineering Lead
+F-0218,Internal audit,Medium,2026-04-17,2026-07-16,2026-06-11,HR Director
+F-0219,Vulnerability scan,Medium,2026-04-15,2026-07-14,2026-08-12,HR Director
+F-0220,Penetration test,Medium,2026-04-18,2026-07-17,2026-06-18,Procurement Lead
+F-0221,Bug report,Medium,2026-04-02,2026-07-01,2026-06-09,Head of IT
+F-0222,Bug report,Medium,2026-04-12,2026-07-11,2026-05-18,CISO
+F-0223,Bug report,Medium,2026-05-09,2026-08-07,2026-06-12,Procurement Lead
+F-0224,Vulnerability scan,Medium,2026-05-09,2026-08-07,2026-06-26,Engineering Lead
+F-0225,Bug report,Medium,2026-05-06,2026-08-04,,Head of IT
+F-0226,Vulnerability scan,High,2026-05-25,2026-06-24,2026-07-05,CISO
+F-0227,Internal audit,Medium,2026-05-06,2026-08-04,2026-06-13,Engineering Lead
+F-0228,Internal audit,Critical,2026-05-07,2026-05-14,2026-05-12,IT Operations Lead
+F-0229,Bug report,Critical,2026-05-06,2026-05-13,2026-05-09,Engineering Lead
+F-0230,Bug report,Medium,2026-05-20,2026-08-18,2026-07-20,HR Director
+F-0231,Bug report,Medium,2026-05-26,2026-08-24,2026-06-15,IT Operations Lead
+F-0232,Internal audit,Medium,2026-05-16,2026-08-14,2026-07-09,IT Operations Lead
+F-0233,Bug report,Medium,2026-05-14,2026-08-12,2026-07-03,CISO
+F-0234,Vulnerability scan,Medium,2026-05-07,2026-08-05,2026-07-14,IT Operations Lead
+F-0235,Penetration test,High,2026-05-24,2026-06-23,2026-07-01,Head of IT
+F-0236,Vulnerability scan,High,2026-05-09,2026-06-08,2026-07-16,HR Director
+F-0237,Bug report,Critical,2026-05-19,2026-05-26,2026-05-25,Head of IT
+F-0238,Internal audit,High,2026-05-20,2026-06-19,2026-06-14,IT Operations Lead
+F-0239,Vulnerability scan,Medium,2026-05-07,2026-08-05,,IT Operations Lead
+F-0240,Vulnerability scan,Medium,2026-05-09,2026-08-07,2026-07-09,Procurement Lead
+F-0241,Bug report,Medium,2026-05-18,2026-08-16,2026-09-26,Procurement Lead
+F-0242,Bug report,Medium,2026-05-06,2026-08-04,2026-06-10,IT Operations Lead
+F-0243,Internal audit,Medium,2026-05-02,2026-07-31,2026-07-17,Engineering Lead
+F-0244,Vulnerability scan,High,2026-05-21,2026-06-20,2026-06-01,Procurement Lead
+F-0245,Bug report,Medium,2026-05-12,2026-08-10,2026-06-12,Engineering Lead
+F-0246,Bug report,Medium,2026-05-28,2026-08-26,2026-07-09,CISO
+F-0247,Penetration test,High,2026-05-09,2026-06-08,2026-05-21,Engineering Lead
+F-0248,Internal audit,Medium,2026-05-21,2026-08-19,2026-08-14,Engineering Lead
+F-0249,Vulnerability scan,Critical,2026-05-18,2026-05-25,2026-05-24,HR Director
+F-0250,Penetration test,Medium,2026-05-20,2026-08-18,2026-06-17,CISO
+F-0251,Penetration test,High,2026-05-26,2026-06-25,2026-08-16,Head of IT
+F-0252,Bug report,Medium,2026-06-11,2026-09-09,,IT Operations Lead
+F-0253,Internal audit,Medium,2026-06-06,2026-09-04,2026-09-30,CISO
+F-0254,Bug report,Medium,2026-06-26,2026-09-24,,CISO
+F-0255,Internal audit,Medium,2026-06-06,2026-09-04,2026-07-22,Engineering Lead
+F-0256,Internal audit,Medium,2026-06-09,2026-09-07,2026-07-03,Engineering Lead
+F-0257,Internal audit,Medium,2026-06-18,2026-09-16,2026-08-23,Head of IT
+F-0258,Bug report,High,2026-06-06,2026-07-06,2026-08-21,Engineering Lead
+F-0259,Internal audit,Medium,2026-06-23,2026-09-21,2026-08-31,Head of IT
+F-0260,Vulnerability scan,Medium,2026-06-11,2026-09-09,2026-07-13,Engineering Lead
+F-0261,Penetration test,Critical,2026-06-02,2026-06-09,2026-06-06,Engineering Lead
+F-0262,Vulnerability scan,Medium,2026-06-20,2026-09-18,2026-07-08,Procurement Lead
+F-0263,Vulnerability scan,Medium,2026-06-20,2026-09-18,2026-08-10,Engineering Lead
+F-0264,Penetration test,Medium,2026-06-01,2026-08-30,2026-08-06,IT Operations Lead
+F-0265,Internal audit,High,2026-06-13,2026-07-13,2026-07-03,CISO
+F-0266,Penetration test,Medium,2026-06-17,2026-09-15,2026-07-29,CISO
+F-0267,Penetration test,Medium,2026-06-11,2026-09-09,,HR Director
+F-0268,Penetration test,High,2026-06-04,2026-07-04,2026-08-01,CISO
+F-0269,Vulnerability scan,Medium,2026-06-08,2026-09-06,2026-06-27,Head of IT
+F-0270,Bug report,Medium,2026-06-24,2026-09-22,2026-07-27,Procurement Lead
+F-0271,Vulnerability scan,High,2026-06-06,2026-07-06,2026-07-02,Engineering Lead
+F-0272,Penetration test,High,2026-06-15,2026-07-15,2026-07-01,HR Director
+F-0273,Internal audit,Medium,2026-06-12,2026-09-10,2026-08-21,Head of IT
+F-0274,Penetration test,Medium,2026-06-05,2026-09-03,2026-07-01,IT Operations Lead
+F-0275,Vulnerability scan,Medium,2026-06-05,2026-09-03,2026-07-04,Head of IT
+F-0276,Internal audit,High,2026-06-04,2026-07-04,2026-08-06,Head of IT
+F-0277,Penetration test,High,2026-06-27,2026-07-27,2026-07-06,CISO
+F-0278,Bug report,High,2026-06-04,2026-07-04,2026-06-11,Procurement Lead
+F-0279,Penetration test,Medium,2026-06-06,2026-09-04,2026-08-13,HR Director
+F-0280,Bug report,High,2026-06-06,2026-07-06,2026-06-14,IT Operations Lead
+F-0281,Vulnerability scan,Medium,2026-06-09,2026-09-07,2026-08-19,Engineering Lead
+F-0282,Bug report,Medium,2026-06-20,2026-09-18,2026-07-20,CISO
+F-0283,Vulnerability scan,High,2026-06-18,2026-07-18,2026-09-03,HR Director
+F-0284,Vulnerability scan,Medium,2026-06-08,2026-09-06,2026-08-21,Procurement Lead
+F-0285,Vulnerability scan,High,2026-06-12,2026-07-12,2026-07-03,CISO
+F-0286,Penetration test,Medium,2026-06-07,2026-09-05,2026-07-15,Procurement Lead
+F-0287,Internal audit,Medium,2026-06-14,2026-09-12,2026-08-14,Procurement Lead
+F-0288,Bug report,Critical,2026-07-25,2026-08-01,2026-07-27,HR Director
+F-0289,Vulnerability scan,Critical,2026-07-01,2026-07-08,2026-07-02,Head of IT
+F-0290,Penetration test,Medium,2026-07-17,2026-10-15,2026-08-13,CISO
+F-0291,Bug report,Medium,2026-07-10,2026-10-08,2026-08-14,CISO
+F-0292,Bug report,Medium,2026-07-20,2026-10-18,,Engineering Lead
+F-0293,Penetration test,Critical,2026-07-11,2026-07-18,2026-07-14,Head of IT
+F-0294,Bug report,Medium,2026-07-28,2026-10-26,2026-09-17,Engineering Lead
+F-0295,Vulnerability scan,High,2026-07-03,2026-08-02,2026-07-15,IT Operations Lead
+F-0296,Penetration test,Medium,2026-07-09,2026-10-07,2026-08-11,HR Director
+F-0297,Internal audit,High,2026-07-05,2026-08-04,2026-09-23,IT Operations Lead
+F-0298,Internal audit,Medium,2026-07-11,2026-10-09,2026-09-24,Head of IT
+F-0299,Internal audit,Medium,2026-07-08,2026-10-06,2026-08-13,IT Operations Lead
+F-0300,Vulnerability scan,High,2026-07-12,2026-08-11,2026-08-14,Head of IT
+F-0301,Internal audit,Medium,2026-07-24,2026-10-22,,IT Operations Lead
+F-0302,Internal audit,Medium,2026-07-15,2026-10-13,2026-09-08,Procurement Lead
+F-0303,Vulnerability scan,Medium,2026-07-13,2026-10-11,2026-08-12,Engineering Lead
+F-0304,Penetration test,High,2026-07-15,2026-08-14,2026-08-01,HR Director
+F-0305,Vulnerability scan,Medium,2026-07-26,2026-10-24,2026-08-30,IT Operations Lead
+F-0306,Bug report,Medium,2026-07-04,2026-10-02,2026-09-05,IT Operations Lead
+F-0307,Penetration test,High,2026-07-01,2026-07-31,2026-07-17,IT Operations Lead
+F-0308,Vulnerability scan,Medium,2026-07-23,2026-10-21,2026-10-06,Engineering Lead
+F-0309,Penetration test,Medium,2026-07-28,2026-10-26,2026-08-20,CISO
+F-0310,Vulnerability scan,High,2026-07-01,2026-07-31,2026-07-23,IT Operations Lead
+F-0311,Bug report,Medium,2026-07-02,2026-09-30,2026-10-12,Head of IT
+F-0312,Vulnerability scan,Critical,2026-07-11,2026-07-18,2026-07-14,CISO
+F-0313,Vulnerability scan,Critical,2026-07-10,2026-07-17,2026-07-28,Head of IT
+F-0314,Bug report,High,2026-07-22,2026-08-21,2026-08-14,CISO
+F-0315,Bug report,High,2026-07-28,2026-08-27,2026-08-06,Head of IT
+F-0316,Vulnerability scan,Medium,2026-07-12,2026-10-10,2026-09-01,Head of IT
+F-0317,Internal audit,Medium,2026-07-16,2026-10-14,,Procurement Lead
+F-0318,Vulnerability scan,Critical,2026-07-20,2026-07-27,2026-07-22,IT Operations Lead
+F-0319,Penetration test,Medium,2026-07-06,2026-10-04,2026-08-12,Procurement Lead
+F-0320,Bug report,High,2026-07-21,2026-08-20,2026-08-03,IT Operations Lead
+F-0321,Internal audit,Medium,2026-07-16,2026-10-14,2026-09-09,IT Operations Lead
+F-0322,Bug report,Critical,2026-07-16,2026-07-23,2026-07-22,Engineering Lead
+F-0323,Bug report,Medium,2026-07-14,2026-10-12,2026-09-19,HR Director
+F-0324,Penetration test,Medium,2026-07-15,2026-10-13,2026-09-15,Procurement Lead
+F-0325,Penetration test,High,2026-07-04,2026-08-03,2026-07-17,Procurement Lead
+F-0326,Vulnerability scan,High,2026-07-07,2026-08-06,2026-07-24,IT Operations Lead
+F-0327,Bug report,Critical,2026-07-26,2026-08-02,2026-07-27,CISO
+F-0328,Bug report,Medium,2026-08-07,2026-11-05,2026-09-28,IT Operations Lead
+F-0329,Internal audit,Medium,2026-08-03,2026-11-01,2026-08-26,Engineering Lead
+F-0330,Internal audit,Medium,2026-08-22,2026-11-20,,Procurement Lead
+F-0331,Bug report,Medium,2026-08-07,2026-11-05,2026-08-27,Procurement Lead
+F-0332,Internal audit,High,2026-08-06,2026-09-05,2026-09-27,Procurement Lead
+F-0333,Internal audit,Medium,2026-08-26,2026-11-24,2026-09-26,HR Director
+F-0334,Internal audit,Medium,2026-08-16,2026-11-14,2026-09-19,CISO
+F-0335,Penetration test,High,2026-08-02,2026-09-01,2026-10-20,Procurement Lead
+F-0336,Bug report,Critical,2026-08-25,2026-09-01,2026-08-31,CISO
+F-0337,Vulnerability scan,Medium,2026-08-13,2026-11-11,2026-11-01,Procurement Lead
+F-0338,Internal audit,Critical,2026-08-28,2026-09-04,2026-09-01,Engineering Lead
+F-0339,Vulnerability scan,Medium,2026-08-18,2026-11-16,2026-10-05,Procurement Lead
+F-0340,Vulnerability scan,Critical,2026-08-08,2026-08-15,2026-08-13,CISO
+F-0341,Bug report,High,2026-08-23,2026-09-22,2026-08-29,CISO
+F-0342,Penetration test,Medium,2026-08-14,2026-11-12,2026-09-25,Engineering Lead
+F-0343,Penetration test,Medium,2026-08-23,2026-11-21,,IT Operations Lead
+F-0344,Penetration test,Medium,2026-08-20,2026-11-18,2026-10-11,IT Operations Lead
+F-0345,Penetration test,Medium,2026-08-14,2026-11-12,2026-10-16,HR Director
+F-0346,Bug report,High,2026-08-09,2026-09-08,2026-08-25,IT Operations Lead
+F-0347,Vulnerability scan,High,2026-08-28,2026-09-27,2026-09-25,HR Director
+F-0348,Penetration test,Medium,2026-08-20,2026-11-18,2026-09-25,IT Operations Lead
+F-0349,Internal audit,Medium,2026-08-08,2026-11-06,2026-08-30,Engineering Lead
+F-0350,Penetration test,Medium,2026-08-10,2026-11-08,2026-10-10,Engineering Lead
+F-0351,Internal audit,Medium,2026-08-08,2026-11-06,2026-08-30,Procurement Lead
+F-0352,Penetration test,High,2026-08-09,2026-09-08,2026-08-15,Head of IT
+F-0353,Internal audit,Medium,2026-08-07,2026-11-05,2026-09-02,Procurement Lead
+F-0354,Penetration test,Medium,2026-08-02,2026-10-31,2026-09-21,CISO
+F-0355,Vulnerability scan,High,2026-08-22,2026-09-21,2026-09-12,Engineering Lead
+F-0356,Bug report,High,2026-08-28,2026-09-27,2026-10-03,HR Director
+F-0357,Bug report,Critical,2026-08-24,2026-08-31,2026-08-25,Procurement Lead
+F-0358,Internal audit,Medium,2026-08-17,2026-11-15,2026-09-10,Engineering Lead
+F-0359,Internal audit,High,2026-09-06,2026-10-06,2026-10-22,Procurement Lead
+F-0360,Internal audit,Medium,2026-09-22,2026-12-21,2026-11-03,CISO
+F-0361,Vulnerability scan,Medium,2026-09-11,2026-12-10,,Procurement Lead
+F-0362,Bug report,Medium,2026-09-18,2026-12-17,,HR Director
+F-0363,Internal audit,Critical,2026-09-19,2026-09-26,2026-09-21,Head of IT
+F-0364,Bug report,Medium,2026-09-23,2026-12-22,,Engineering Lead
+F-0365,Vulnerability scan,Medium,2026-09-03,2026-12-02,,Engineering Lead
+F-0366,Bug report,Critical,2026-09-26,2026-10-03,2026-10-08,CISO
+F-0367,Vulnerability scan,Critical,2026-09-16,2026-09-23,2026-10-03,Procurement Lead
+F-0368,Bug report,Medium,2026-09-01,2026-11-30,,HR Director
+F-0369,Internal audit,Medium,2026-09-15,2026-12-14,,Head of IT
+F-0370,Vulnerability scan,Medium,2026-09-26,2026-12-25,,HR Director
+F-0371,Internal audit,High,2026-09-05,2026-10-05,2026-09-25,Head of IT
+F-0372,Bug report,High,2026-09-23,2026-10-23,2026-10-15,HR Director
+F-0373,Penetration test,Medium,2026-09-14,2026-12-13,,Procurement Lead
+F-0374,Internal audit,Medium,2026-09-14,2026-12-13,,Engineering Lead
+F-0375,Bug report,Medium,2026-09-10,2026-12-09,,Head of IT
+F-0376,Vulnerability scan,High,2026-09-13,2026-10-13,,Procurement Lead
+F-0377,Bug report,Medium,2026-09-09,2026-12-08,2026-10-08,Procurement Lead
+F-0378,Internal audit,Medium,2026-09-14,2026-12-13,,Engineering Lead
+F-0379,Vulnerability scan,Medium,2026-09-03,2026-12-02,,Procurement Lead
+F-0380,Vulnerability scan,High,2026-09-27,2026-10-27,2026-10-07,CISO
+F-0381,Penetration test,High,2026-09-25,2026-10-25,2026-10-05,Head of IT
+F-0382,Vulnerability scan,Medium,2026-09-21,2026-12-20,,Head of IT
+F-0383,Vulnerability scan,Medium,2026-09-13,2026-12-12,2026-10-23,HR Director
+F-0384,Penetration test,High,2026-09-25,2026-10-25,2026-10-05,HR Director
+F-0385,Vulnerability scan,Medium,2026-09-13,2026-12-12,2026-11-03,Engineering Lead
+F-0386,Penetration test,Medium,2026-09-13,2026-12-12,2026-10-23,Head of IT
+F-0387,Bug report,High,2026-09-10,2026-10-10,2026-09-30,Head of IT
+F-0388,Internal audit,Medium,2026-09-08,2026-12-07,,Engineering Lead
+F-0389,Bug report,High,2026-09-23,2026-10-23,2026-10-20,Head of IT
+F-0390,Vulnerability scan,Critical,2026-09-14,2026-09-21,2026-09-20,IT Operations Lead
+F-0391,Penetration test,High,2026-09-07,2026-10-07,,HR Director
+F-0392,Bug report,Medium,2026-09-09,2026-12-08,2026-10-22,HR Director
+F-0393,Internal audit,High,2026-09-03,2026-10-03,2026-09-12,HR Director
+F-0394,Bug report,Medium,2026-09-21,2026-12-20,2026-10-25,IT Operations Lead
+F-0395,Internal audit,High,2026-09-21,2026-10-21,2026-10-08,Engineering Lead
+F-0396,Penetration test,High,2026-09-23,2026-10-23,2026-10-19,HR Director
+F-0397,Penetration test,High,2026-10-20,2026-11-19,2026-10-26,Procurement Lead
+F-0398,Penetration test,Medium,2026-10-05,2027-01-03,,Engineering Lead
+F-0399,Penetration test,Medium,2026-10-13,2027-01-11,,CISO
+F-0400,Penetration test,High,2026-10-15,2026-11-14,2026-10-28,Engineering Lead
+F-0401,Vulnerability scan,Medium,2026-10-07,2027-01-05,,Head of IT
+F-0402,Bug report,Medium,2026-10-24,2027-01-22,,Head of IT
+F-0403,Penetration test,Medium,2026-10-12,2027-01-10,,CISO
+F-0404,Penetration test,Medium,2026-10-10,2027-01-08,,CISO
+F-0405,Bug report,Medium,2026-10-09,2027-01-07,2026-11-03,Procurement Lead
+F-0406,Penetration test,Medium,2026-10-17,2027-01-15,,IT Operations Lead
+F-0407,Internal audit,Medium,2026-10-15,2027-01-13,2026-11-06,Head of IT
+F-0408,Penetration test,Medium,2026-10-04,2027-01-02,,Procurement Lead
+F-0409,Penetration test,Medium,2026-10-04,2027-01-02,,Procurement Lead
+F-0410,Penetration test,High,2026-10-01,2026-10-31,2026-10-09,Head of IT
+F-0411,Penetration test,Medium,2026-10-11,2027-01-09,,HR Director
+F-0412,Penetration test,High,2026-10-10,2026-11-09,2026-10-18,Procurement Lead
+F-0413,Bug report,Medium,2026-10-28,2027-01-26,,CISO
+F-0414,Vulnerability scan,High,2026-10-17,2026-11-16,,CISO
+F-0415,Bug report,High,2026-10-05,2026-11-04,2026-10-16,Engineering Lead
+F-0416,Vulnerability scan,Medium,2026-10-21,2027-01-19,,HR Director
+F-0417,Bug report,Medium,2026-10-16,2027-01-14,,Engineering Lead
+F-0418,Penetration test,Medium,2026-10-06,2027-01-04,,Engineering Lead
+F-0419,Bug report,High,2026-10-23,2026-11-22,2026-11-02,Procurement Lead
+F-0420,Internal audit,Medium,2026-10-03,2027-01-01,,HR Director
+F-0421,Penetration test,High,2026-10-07,2026-11-06,2026-11-01,Engineering Lead
+F-0422,Penetration test,High,2026-10-12,2026-11-11,,Head of IT
+F-0423,Penetration test,Medium,2026-10-11,2027-01-09,,Head of IT
+F-0424,Vulnerability scan,Medium,2026-10-12,2027-01-10,,Procurement Lead
+F-0425,Internal audit,Medium,2026-10-17,2027-01-15,,HR Director
+F-0426,Penetration test,High,2026-10-21,2026-11-20,2026-11-03,Procurement Lead
+F-0427,Bug report,High,2026-10-25,2026-11-24,2026-11-07,CISO
+F-0428,Vulnerability scan,Medium,2026-10-05,2027-01-03,,IT Operations Lead

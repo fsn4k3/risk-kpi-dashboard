@@ -1,0 +1,61 @@
+id,asset,threat,vulnerability,iso_ref,likelihood,impact,inherent_score,owner,treatment,controls,residual_likelihood,residual_impact,residual_score,status,next_review
+R-001,Office network / Wi-Fi,Credential stuffing / password spraying,Weak or reused passwords,A.5.17,3,2,6,HR Director,Mitigate,MFA rollout; conditional access policies,2,2,4,In progress,2027-03-16
+R-002,Public REST API,Credential stuffing / password spraying,Weak or reused passwords,A.5.17,4,4,16,IT Operations Lead,Mitigate,MFA rollout; conditional access policies,3,3,9,In progress,2027-03-27
+R-003,VPN gateway,Credential stuffing / password spraying,Weak or reused passwords,A.5.17,1,4,4,CISO,Accept,Risk accepted at current level; annual review,1,4,4,In progress,2027-02-21
+R-004,AWS production account,Credential stuffing / password spraying,Weak or reused passwords,A.5.17,3,3,9,Procurement Lead,Mitigate,MFA rollout; conditional access policies,2,2,4,In progress,2026-12-22
+R-005,Source code repositories,Phishing leading to account takeover,Insufficient user awareness,A.6.3,3,4,12,CISO,Accept,Risk accepted at current level; annual review,3,4,12,Closed,2027-03-06
+R-006,HR SaaS platform,Phishing leading to account takeover,Insufficient user awareness,A.6.3,3,4,12,Engineering Lead,Mitigate,Quarterly phishing simulations; awareness training,2,3,6,Closed,2027-01-05
+R-007,VPN gateway,Phishing leading to account takeover,Insufficient user awareness,A.6.3,1,5,5,CISO,Accept,Risk accepted at current level; annual review,1,5,5,Open,2027-03-10
+R-008,HR SaaS platform,Phishing leading to account takeover,Insufficient user awareness,A.6.3,2,5,10,Procurement Lead,Transfer,Cyber insurance; contractual liability clauses,2,4,8,In progress,2027-03-02
+R-009,Managed SOC provider,Exploitation of unpatched software,Delayed patching,A.8.8,2,2,4,Head of IT,Mitigate,Monthly patch cycle with SLA tracking,1,1,1,In progress,2027-03-02
+R-010,Public REST API,Exploitation of unpatched software,Delayed patching,A.8.8,3,5,15,Head of IT,Transfer,Cyber insurance; contractual liability clauses,3,4,12,In progress,2027-01-30
+R-011,HR SaaS platform,Exploitation of unpatched software,Delayed patching,A.8.8,3,4,12,CISO,Mitigate,Monthly patch cycle with SLA tracking,2,3,6,In progress,2026-12-21
+R-012,Employee endpoints,Exploitation of unpatched software,Delayed patching,A.8.8,3,4,12,IT Operations Lead,Transfer,Cyber insurance; contractual liability clauses,3,3,9,Open,2027-04-15
+R-013,Managed SOC provider,Ransomware via endpoint compromise,Gaps in endpoint protection,A.8.7,3,2,6,Head of IT,Mitigate,EDR deployment; attack surface reduction rules,1,2,2,In progress,2027-03-12
+R-014,Public REST API,Ransomware via endpoint compromise,Gaps in endpoint protection,A.8.7,3,5,15,IT Operations Lead,Mitigate,EDR deployment; attack surface reduction rules,2,4,8,Closed,2027-02-19
+R-015,CI/CD pipeline,Ransomware via endpoint compromise,Gaps in endpoint protection,A.8.7,2,4,8,CISO,Mitigate,EDR deployment; attack surface reduction rules,1,4,4,In progress,2026-12-23
+R-016,Backup infrastructure,Ransomware via endpoint compromise,Gaps in endpoint protection,A.8.7,4,3,12,IT Operations Lead,Mitigate,EDR deployment; attack surface reduction rules,2,3,6,Open,2026-12-28
+R-017,HR SaaS platform,SQL injection / web exploitation,"Insecure code, missing reviews",A.8.28,1,3,3,CISO,Accept,Risk accepted at current level; annual review,1,3,3,In progress,2026-12-03
+R-018,Customer database,SQL injection / web exploitation,"Insecure code, missing reviews",A.8.28,2,3,6,IT Operations Lead,Mitigate,Secure code review; SAST in CI pipeline,1,3,3,In progress,2027-03-21
+R-019,Payment provider integration,SQL injection / web exploitation,"Insecure code, missing reviews",A.8.28,4,5,20,Procurement Lead,Transfer,Cyber insurance; contractual liability clauses,4,4,16,Closed,2026-12-11
+R-020,CI/CD pipeline,SQL injection / web exploitation,"Insecure code, missing reviews",A.8.28,2,3,6,HR Director,Transfer,Cyber insurance; contractual liability clauses,2,2,4,In progress,2027-02-06
+R-021,Active Directory,Privilege escalation in AD,"Excessive privileges, stale accounts",A.8.2,1,4,4,IT Operations Lead,Transfer,Cyber insurance; contractual liability clauses,1,3,3,In progress,2027-02-26
+R-022,Source code repositories,Privilege escalation in AD,"Excessive privileges, stale accounts",A.8.2,5,3,15,Head of IT,Mitigate,Tiered admin model; quarterly access review,4,2,8,Closed,2027-04-07
+R-023,CI/CD pipeline,Privilege escalation in AD,"Excessive privileges, stale accounts",A.8.2,3,4,12,Engineering Lead,Mitigate,Tiered admin model; quarterly access review,2,4,8,Open,2027-01-14
+R-024,Public REST API,Privilege escalation in AD,"Excessive privileges, stale accounts",A.8.2,1,4,4,Engineering Lead,Mitigate,Tiered admin model; quarterly access review,1,4,4,Closed,2026-12-18
+R-025,AWS production account,Cloud misconfiguration exposure,No baseline hardening checks,A.8.9,4,3,12,CISO,Transfer,Cyber insurance; contractual liability clauses,4,2,8,In progress,2027-01-01
+R-026,Email platform,Cloud misconfiguration exposure,No baseline hardening checks,A.8.9,2,4,8,HR Director,Accept,Risk accepted at current level; annual review,2,4,8,Open,2027-03-14
+R-027,AWS production account,Cloud misconfiguration exposure,No baseline hardening checks,A.8.9,4,3,12,IT Operations Lead,Transfer,Cyber insurance; contractual liability clauses,4,2,8,In progress,2027-01-09
+R-028,Active Directory,Cloud misconfiguration exposure,No baseline hardening checks,A.8.9,3,4,12,CISO,Mitigate,IaC baseline scanning; CSPM alerts,2,4,8,In progress,2027-03-13
+R-029,Payment provider integration,Insider data exfiltration,"Broad data access, weak monitoring",A.8.16,4,3,12,Engineering Lead,Mitigate,DLP monitoring; least-privilege data access,2,2,4,In progress,2026-12-03
+R-030,Managed SOC provider,Insider data exfiltration,"Broad data access, weak monitoring",A.8.16,3,5,15,Head of IT,Transfer,Cyber insurance; contractual liability clauses,3,4,12,Open,2026-12-02
+R-031,Active Directory,Insider data exfiltration,"Broad data access, weak monitoring",A.8.16,3,3,9,CISO,Mitigate,DLP monitoring; least-privilege data access,1,2,2,In progress,2026-12-01
+R-032,Payment provider integration,Insider data exfiltration,"Broad data access, weak monitoring",A.8.16,3,3,9,Procurement Lead,Accept,Risk accepted at current level; annual review,3,3,9,In progress,2027-04-07
+R-033,Employee endpoints,Vendor breach propagating,No vendor security requirements,A.5.19,4,3,12,IT Operations Lead,Accept,Risk accepted at current level; annual review,4,3,12,Open,2026-11-28
+R-034,Managed SOC provider,Vendor breach propagating,No vendor security requirements,A.5.19,2,1,2,IT Operations Lead,Mitigate,Vendor security clauses; annual assessment,1,1,1,Closed,2027-04-10
+R-035,Source code repositories,Vendor breach propagating,No vendor security requirements,A.5.19,3,3,9,CISO,Transfer,Cyber insurance; contractual liability clauses,3,2,6,In progress,2027-03-03
+R-036,CI/CD pipeline,Vendor breach propagating,No vendor security requirements,A.5.19,3,4,12,Head of IT,Mitigate,Vendor security clauses; annual assessment,2,3,6,Closed,2027-03-01
+R-037,Email platform,Secrets leaked in repositories,No secret scanning in CI,A.8.28,4,2,8,Procurement Lead,Mitigate,Secret scanning in CI; pre-commit hooks,3,2,6,Closed,2027-02-09
+R-038,HR SaaS platform,Secrets leaked in repositories,No secret scanning in CI,A.8.28,4,3,12,HR Director,Transfer,Cyber insurance; contractual liability clauses,4,2,8,Open,2027-04-10
+R-039,Payment provider integration,Secrets leaked in repositories,No secret scanning in CI,A.8.28,3,5,15,IT Operations Lead,Transfer,Cyber insurance; contractual liability clauses,3,4,12,In progress,2026-12-30
+R-040,Public REST API,Secrets leaked in repositories,No secret scanning in CI,A.8.28,2,3,6,CISO,Mitigate,Secret scanning in CI; pre-commit hooks,1,2,2,In progress,2027-01-27
+R-041,VPN gateway,DDoS against public services,No upstream mitigation contract,A.8.6,2,4,8,CISO,Mitigate,CDN/DDoS protection service,1,4,4,In progress,2026-12-24
+R-042,Active Directory,DDoS against public services,No upstream mitigation contract,A.8.6,5,3,15,CISO,Mitigate,CDN/DDoS protection service,4,3,12,In progress,2027-01-20
+R-043,Public REST API,DDoS against public services,No upstream mitigation contract,A.8.6,4,3,12,CISO,Transfer,Cyber insurance; contractual liability clauses,4,2,8,Open,2027-03-15
+R-044,Payment provider integration,DDoS against public services,No upstream mitigation contract,A.8.6,3,1,3,IT Operations Lead,Mitigate,CDN/DDoS protection service,2,1,2,Open,2027-03-14
+R-045,HR SaaS platform,Backup destruction / tampering,Backups not isolated or tested,A.8.13,3,4,12,CISO,Mitigate,Immutable offline backups; restore tests,1,4,4,In progress,2027-02-24
+R-046,Customer web portal,Backup destruction / tampering,Backups not isolated or tested,A.8.13,3,5,15,CISO,Mitigate,Immutable offline backups; restore tests,1,5,5,In progress,2027-04-14
+R-047,HR SaaS platform,Backup destruction / tampering,Backups not isolated or tested,A.8.13,3,2,6,Procurement Lead,Mitigate,Immutable offline backups; restore tests,2,1,2,Closed,2027-04-13
+R-048,Employee endpoints,Backup destruction / tampering,Backups not isolated or tested,A.8.13,4,4,16,Head of IT,Mitigate,Immutable offline backups; restore tests,3,3,9,Open,2027-02-03
+R-049,CI/CD pipeline,Session hijacking on public API,Weak token handling,A.8.26,3,5,15,Head of IT,Transfer,Cyber insurance; contractual liability clauses,3,4,12,Open,2027-02-01
+R-050,Source code repositories,Session hijacking on public API,Weak token handling,A.8.26,4,4,16,Procurement Lead,Accept,Risk accepted at current level; annual review,4,4,16,Open,2027-04-08
+R-051,AWS production account,Session hijacking on public API,Weak token handling,A.8.26,4,5,20,Head of IT,Mitigate,Short-lived tokens; session binding,3,5,15,Open,2027-01-22
+R-052,Customer web portal,Session hijacking on public API,Weak token handling,A.8.26,3,3,9,Procurement Lead,Mitigate,Short-lived tokens; session binding,2,2,4,Open,2027-01-26
+R-053,Office network / Wi-Fi,Lost / stolen laptop,Missing disk encryption enforcement,A.7.9,3,5,15,CISO,Mitigate,Full-disk encryption enforced via MDM,1,4,4,In progress,2027-02-25
+R-054,Customer web portal,Lost / stolen laptop,Missing disk encryption enforcement,A.7.9,3,1,3,Engineering Lead,Accept,Risk accepted at current level; annual review,3,1,3,In progress,2026-12-16
+R-055,AWS production account,Lost / stolen laptop,Missing disk encryption enforcement,A.7.9,5,3,15,Procurement Lead,Accept,Risk accepted at current level; annual review,5,3,15,In progress,2026-12-18
+R-056,CI/CD pipeline,Lost / stolen laptop,Missing disk encryption enforcement,A.7.9,3,3,9,IT Operations Lead,Mitigate,Full-disk encryption enforced via MDM,2,3,6,In progress,2027-01-10
+R-057,Active Directory,Business email compromise (BEC),No payment verification process,A.5.14,5,1,5,HR Director,Mitigate,Dual approval for payment changes,3,1,3,Open,2027-01-15
+R-058,Email platform,Business email compromise (BEC),No payment verification process,A.5.14,3,2,6,IT Operations Lead,Transfer,Cyber insurance; contractual liability clauses,3,1,3,In progress,2026-12-23
+R-059,Public REST API,Business email compromise (BEC),No payment verification process,A.5.14,3,1,3,Head of IT,Transfer,Cyber insurance; contractual liability clauses,3,1,3,In progress,2027-03-02
+R-060,Email platform,Business email compromise (BEC),No payment verification process,A.5.14,4,3,12,CISO,Mitigate,Dual approval for payment changes,3,2,6,Open,2027-03-04
