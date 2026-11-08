@@ -8,6 +8,8 @@ from pathlib import Path
 
 import pandas as pd
 
+from kpis import AGE_BUCKETS, TARGETS, age_bucket, tile_status
+
 ROOT = Path(__file__).parent
 DIST = ROOT / "dist"
 DIST.mkdir(exist_ok=True)
@@ -67,10 +69,8 @@ patch_by_class = patching[patching["month"].isin(last3)].groupby("asset_class")[
 # open findings aging
 open_f = findings[~findings["resolved"]].copy()
 open_f["age"] = (pd.Timestamp(TODAY) - open_f["opened"]).dt.days
-buckets = ["0-30 days", "31-60 days", "61-90 days", "90+ days"]
-def bucket(a):
-    return buckets[0] if a <= 30 else buckets[1] if a <= 60 else buckets[2] if a <= 90 else buckets[3]
-open_f["bucket"] = open_f["age"].map(bucket)
+buckets = AGE_BUCKETS
+open_f["bucket"] = open_f["age"].map(age_bucket)
 aging = {sev: [int(((open_f["severity"] == sev) & (open_f["bucket"] == b)).sum()) for b in buckets] for sev in SEVERITIES}
 
 # residual risk heatmap + top risks
@@ -110,22 +110,30 @@ payload = {
     "patch": {"labels": list(patch_by_class.index), "values": [int(v) for v in patch_by_class.values]},
     "heat": heat,
     "heatItems": heat_items,
+    "targets": {"sla": TARGETS["sla_pct"]["target"], "click": TARGETS["phish_click"]["target"],
+                "patch": TARGETS["patch_latency"]["target"]},
 }
 
 tiles = [
-    ("Findings remediated within SLA", f"{sla_now:.0f}%", sla_now - sla_prev, "pp vs previous quarter", True),
-    ("Mean time to remediate (High)", f"{mttr_high_now:.0f} days", mttr_high_now - mttr_high_prev, "days vs previous quarter", False),
-    ("Phishing click rate", f"{click_now:.0f}%", click_now - click_prev, "pp vs 3 months ago", False),
-    ("Median patch latency", f"{plat_now} days", plat_now - plat_prev, "days vs previous quarter", False),
+    ("Findings remediated within SLA", f"{sla_now:.0f}%", sla_now - sla_prev, "pp vs previous quarter", True, "sla_pct", sla_now),
+    ("Mean time to remediate (High)", f"{mttr_high_now:.0f} days", mttr_high_now - mttr_high_prev, "days vs previous quarter", False, "mttr_high", mttr_high_now),
+    ("Phishing click rate", f"{click_now:.0f}%", click_now - click_prev, "pp vs 3 months ago", False, "phish_click", click_now),
+    ("Median patch latency", f"{plat_now} days", plat_now - plat_prev, "days vs previous quarter", False, "patch_latency", plat_now),
 ]
 
-def tile_html(label, value, delta, unit, up_good):
+STATUS_META = {"good": ("\u2713", "On target"), "warn": ("!", "Attention"), "bad": ("\u2717", "Off target")}
+
+def tile_html(label, value, delta, unit, up_good, kpi, now_value):
     good = (delta <= 0) ^ up_good if delta != 0 else True
-    sign = "+" if delta > 0 else "−" if delta < 0 else "±"
+    sign = "+" if delta > 0 else "\u2212" if delta < 0 else "\u00b1"
     cls = "good" if good else "bad"
+    st = tile_status(kpi, now_value)
+    icon, word = STATUS_META[st]
+    tgt = TARGETS[kpi]["label"]
     return (f'<div class="tile"><div class="tile-label">{label}</div>'
             f'<div class="tile-value">{value}</div>'
-            f'<div class="tile-delta {cls}">{sign}{abs(delta):.0f} {unit}</div></div>')
+            f'<div class="tile-delta {cls}">{sign}{abs(delta):.0f} {unit}</div>'
+            f'<div class="tile-status st-{st}"><span class="st-ic">{icon}</span> {word} \u00b7 {tgt}</div></div>')
 
 tiles_html = "".join(tile_html(*t) for t in tiles)
 
@@ -213,6 +221,13 @@ h2 { font-size: 15px; margin: 26px 0 10px; }
 .tile-value { font-size: 30px; font-weight: 600; margin: 2px 0; }
 .tile-delta { font-size: 12.5px; font-weight: 600; }
 .tile-delta.good { color: var(--good); } .tile-delta.bad { color: var(--bad); }
+.tile-status { margin-top: 7px; font-size: 11.5px; color: var(--ink2); border-top: 1px solid var(--grid);
+  padding-top: 6px; }
+.tile-status .st-ic { display: inline-flex; align-items: center; justify-content: center;
+  width: 14px; height: 14px; border-radius: 50%; color: #fff; font-size: 9px; font-weight: 700;
+  vertical-align: 1px; margin-right: 2px; }
+.st-good .st-ic { background: #0ca30c; } .st-warn .st-ic { background: #fab219; color: #0b0b0b; }
+.st-bad .st-ic { background: #d03b3b; }
 .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 @media (max-width: 860px) { .grid2 { grid-template-columns: 1fr; } }
 .chart-card h3, .card h3 { font-size: 13.5px; margin: 0 0 2px; }
@@ -401,6 +416,31 @@ function line(ds, color) {
     pointRadius: 0, pointHoverRadius: 5, pointHoverBorderColor: cssVar('--surface'),
     pointHoverBorderWidth: 2, tension: 0.25, spanGaps: true };
 }
+const targetLine = {
+  id: 'targetLine',
+  afterDatasetsDraw(chart, args, opts) {
+    if (!opts || opts.value == null) return;
+    const { ctx, chartArea, scales } = chart;
+    const horiz = opts.axis === 'x';
+    const scale = horiz ? scales.x : scales.y;
+    const pos = scale.getPixelForValue(opts.value);
+    ctx.save();
+    ctx.strokeStyle = cssVar('--muted'); ctx.lineWidth = 1;
+    ctx.setLineDash([5, 4]);
+    ctx.beginPath();
+    if (horiz) { ctx.moveTo(pos, chartArea.top); ctx.lineTo(pos, chartArea.bottom); }
+    else { ctx.moveTo(chartArea.left, pos); ctx.lineTo(chartArea.right, pos); }
+    ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = cssVar('--muted');
+    ctx.font = '10px system-ui, sans-serif';
+    if (horiz) { ctx.textAlign = 'left'; ctx.fillText(opts.label, pos + 4, chartArea.top + 10); }
+    else { ctx.textAlign = 'right'; ctx.fillText(opts.label, chartArea.right, pos - 4); }
+    ctx.restore();
+  }
+};
+Chart.register(targetLine);
+
 function renderCharts() {
   charts.forEach(c => c.destroy()); charts = [];
   const C = [cssVar('--s1'), cssVar('--s2'), cssVar('--s3')];
@@ -409,7 +449,8 @@ function renderCharts() {
   charts.push(new Chart(slaChart, { type: 'line',
     data: { labels: DATA.months,
       datasets: SEV.map((s, i) => line({ label: s, data: DATA.sla[s] }, C[i])) },
-    options: baseOpts(null, true) }));
+    options: { ...baseOpts(null, true), plugins: { ...baseOpts(null, true).plugins,
+      targetLine: { value: DATA.targets.sla, label: 'target ' + DATA.targets.sla + '%' } } } }));
 
   charts.push(new Chart(mttrChart, { type: 'line',
     data: { labels: DATA.months,
@@ -431,14 +472,16 @@ function renderCharts() {
     data: { labels: DATA.phishing.labels,
       datasets: [ line({ label: 'Click rate', data: DATA.phishing.click }, C[1]),
                   line({ label: 'Report rate', data: DATA.phishing.report }, C[0]) ] },
-    options: baseOpts('%', false) }));
+    options: { ...baseOpts('%', false), plugins: { ...baseOpts('%', false).plugins,
+      targetLine: { value: DATA.targets.click, label: 'click target < ' + DATA.targets.click + '%' } } } }));
 
   charts.push(new Chart(patchChart, { type: 'bar',
     data: { labels: DATA.patch.labels,
       datasets: [{ label: 'Median days', data: DATA.patch.values, backgroundColor: C[0],
         maxBarThickness: 20, borderRadius: { topRight: 4, bottomRight: 4 }, borderSkipped: 'start' }] },
     options: { ...baseOpts(null, false), indexAxis: 'y',
-      plugins: { ...baseOpts(null, false).plugins, legend: { display: false } },
+      plugins: { ...baseOpts(null, false).plugins, legend: { display: false },
+        targetLine: { value: DATA.targets.patch, label: 'target ' + DATA.targets.patch + 'd', axis: 'x' } },
       scales: { x: { grid: { color: cssVar('--grid') }, border: { display: false },
                      ticks: { color: cssVar('--muted'), font: { size: 11 } }, beginAtZero: true,
                      title: { display: true, text: 'days', color: cssVar('--muted'), font: { size: 11 } } },

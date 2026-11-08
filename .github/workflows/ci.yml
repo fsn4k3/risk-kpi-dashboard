@@ -1,0 +1,27 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install pandas pytest
+      - name: Run tests
+        run: pytest tests/ -q
+      - name: Generate demo data
+        run: python generate_data.py
+      - name: Build dashboard
+        run: python build_dashboard.py
+      - name: Sanity-check output
+        run: |
+          test -s dist/dashboard.html
+          grep -q "Security Risk &amp; KPI Dashboard" dist/dashboard.html

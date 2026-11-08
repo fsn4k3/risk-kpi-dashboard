@@ -65,6 +65,13 @@ h2 { font-size: 15px; margin: 26px 0 10px; }
 .tile-value { font-size: 30px; font-weight: 600; margin: 2px 0; }
 .tile-delta { font-size: 12.5px; font-weight: 600; }
 .tile-delta.good { color: var(--good); } .tile-delta.bad { color: var(--bad); }
+.tile-status { margin-top: 7px; font-size: 11.5px; color: var(--ink2); border-top: 1px solid var(--grid);
+  padding-top: 6px; }
+.tile-status .st-ic { display: inline-flex; align-items: center; justify-content: center;
+  width: 14px; height: 14px; border-radius: 50%; color: #fff; font-size: 9px; font-weight: 700;
+  vertical-align: 1px; margin-right: 2px; }
+.st-good .st-ic { background: #0ca30c; } .st-warn .st-ic { background: #fab219; color: #0b0b0b; }
+.st-bad .st-ic { background: #d03b3b; }
 .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 @media (max-width: 860px) { .grid2 { grid-template-columns: 1fr; } }
 .chart-card h3, .card h3 { font-size: 13.5px; margin: 0 0 2px; }
@@ -101,7 +108,7 @@ footer { color: var(--muted); font-size: 12px; margin-top: 30px; }
 
 <h2>Executive summary</h2>
 <div class="card summary">Security posture improved over the last quarter: 90% of findings were remediated within SLA (up from 86%), and mean time to remediate High-severity findings fell from 32 to 20 days. The phishing simulation click rate dropped to 8% (from 13% three months earlier) while the median patch latency is now 10 days. 4 risks remain in the High band after treatment; the top residual risks below require management decisions on ownership and funding.</div>
-<div class="tiles"><div class="tile"><div class="tile-label">Findings remediated within SLA</div><div class="tile-value">90%</div><div class="tile-delta good">+5 pp vs previous quarter</div></div><div class="tile"><div class="tile-label">Mean time to remediate (High)</div><div class="tile-value">20 days</div><div class="tile-delta good">−11 days vs previous quarter</div></div><div class="tile"><div class="tile-label">Phishing click rate</div><div class="tile-value">8%</div><div class="tile-delta good">−4 pp vs 3 months ago</div></div><div class="tile"><div class="tile-label">Median patch latency</div><div class="tile-value">10 days</div><div class="tile-delta good">−4 days vs previous quarter</div></div></div>
+<div class="tiles"><div class="tile"><div class="tile-label">Findings remediated within SLA</div><div class="tile-value">90%</div><div class="tile-delta good">+5 pp vs previous quarter</div><div class="tile-status st-good"><span class="st-ic">✓</span> On target · target ≥ 90%</div></div><div class="tile"><div class="tile-label">Mean time to remediate (High)</div><div class="tile-value">20 days</div><div class="tile-delta good">−11 days vs previous quarter</div><div class="tile-status st-good"><span class="st-ic">✓</span> On target · target ≤ 30 days</div></div><div class="tile"><div class="tile-label">Phishing click rate</div><div class="tile-value">8%</div><div class="tile-delta good">−4 pp vs 3 months ago</div><div class="tile-status st-good"><span class="st-ic">✓</span> On target · target < 10%</div></div><div class="tile"><div class="tile-label">Median patch latency</div><div class="tile-value">10 days</div><div class="tile-delta good">−4 days vs previous quarter</div><div class="tile-status st-good"><span class="st-ic">✓</span> On target · target ≤ 14 days</div></div></div>
 
 <div class="grid2" style="margin-top:14px">
   <div class="card">
@@ -162,7 +169,7 @@ built with Python + Chart.js · <span id="src">github.com/fsn4k3/risk-kpi-dashbo
 
 <div id="heatTip"></div>
 <script>
-const DATA = {"months": ["Nov 25", "Dec 25", "Jan 26", "Feb 26", "Mar 26", "Apr 26", "May 26", "Jun 26", "Jul 26", "Aug 26", "Sep 26", "Oct 26"], "sla": {"Critical": [50.0, 50.0, 50.0, 50.0, 53.8, 53.8, 66.7, 77.8, 92.3, 92.3, 81.2, 75.0], "High": [57.1, 45.8, 45.9, 42.9, 53.5, 58.3, 58.1, 58.3, 65.5, 70.0, 80.0, 85.7], "Medium": [60.9, 50.0, 48.5, 41.5, 47.4, 60.7, 80.0, 89.7, 94.5, 96.4, 97.6, 100.0]}, "mttr": {"Critical": [10.0, 9.0, 8.7, 9.0, 8.4, 8.4, 7.1, 6.3, 4.6, 4.3, 5.6, 6.6], "High": [36.1, 39.7, 39.9, 41.5, 39.0, 37.5, 37.0, 35.6, 31.5, 29.3, 23.9, 20.3], "Medium": [109.4, 116.2, 118.1, 122.8, 112.8, 91.8, 66.0, 56.9, 51.3, 47.3, 44.7, 38.9]}, "aging": {"buckets": ["0-30 days", "31-60 days", "61-90 days", "90+ days"], "data": {"Critical": [0, 0, 0, 0], "High": [2, 1, 1, 0], "Medium": [12, 17, 6, 12]}}, "phishing": {"labels": ["Nov 25", "Dec 25", "Jan 26", "Feb 26", "Mar 26", "Apr 26", "May 26", "Jun 26", "Jul 26", "Aug 26", "Sep 26", "Oct 26"], "click": [24.0, 21.0, 21.2, 19.2, 16.1, 16.3, 16.1, 14.5, 13.0, 13.0, 7.1, 8.5], "report": [9.0, 12.5, 13.8, 15.0, 19.5, 17.7, 20.0, 20.0, 26.1, 29.8, 32.7, 35.7]}, "patch": {"labels": ["Cloud workloads", "Endpoints", "Servers", "Databases", "Network devices"], "values": [4, 7, 14, 17, 26]}, "heat": [[2, 2, 4, 0, 0], [3, 5, 3, 5, 0], [3, 5, 4, 2, 1], [6, 5, 5, 2, 0], [2, 0, 1, 0, 0]], "heatItems": [[["R-009 Exploitation of unpatched software", "R-034 Vendor breach propagating"], ["R-044 DDoS against public services", "R-047 Backup destruction / tampering"], ["R-054 Lost / stolen laptop", "R-057 Business email compromise (BEC)", "R-058 Business email compromise (BEC)", "R-059 Business email compromise (BEC)"], [], []], [["R-013 Ransomware via endpoint compromise", "R-031 Insider data exfiltration", "R-040 Secrets leaked in repositories"], ["R-001 Credential stuffing / password spraying", "R-004 Credential stuffing / password spraying", "R-020 SQL injection / web exploitation", "R-029 Insider data exfiltration", "R-052 Session hijacking on public API"], ["R-035 Vendor breach propagating", "R-037 Secrets leaked in repositories", "R-060 Business email compromise (BEC)"], ["R-022 Privilege escalation in AD", "R-025 Cloud misconfiguration exposure", "R-027 Cloud misconfiguration exposure", "R-038 Secrets leaked in repositories", "R-043 DDoS against public services"], []], [["R-017 SQL injection / web exploitation", "R-018 SQL injection / web exploitation", "R-021 Privilege escalation in AD"], ["R-006 Phishing leading to account takeover", "R-011 Exploitation of unpatched software", "R-016 Ransomware via endpoint compromise", "R-036 Vendor breach propagating", "R-056 Lost / stolen laptop"], ["R-002 Credential stuffing / password spraying", "R-012 Exploitation of unpatched software", "R-032 Insider data exfiltration", "R-048 Backup destruction / tampering"], ["R-033 Vendor breach propagating", "R-042 DDoS against public services"], ["R-055 Lost / stolen laptop"]], [["R-003 Credential stuffing / password spraying", "R-015 Ransomware via endpoint compromise", "R-024 Privilege escalation in AD", "R-041 DDoS against public services", "R-045 Backup destruction / tampering", "R-053 Lost / stolen laptop"], ["R-008 Phishing leading to account takeover", "R-014 Ransomware via endpoint compromise", "R-023 Privilege escalation in AD", "R-026 Cloud misconfiguration exposure", "R-028 Cloud misconfiguration exposure"], ["R-005 Phishing leading to account takeover", "R-010 Exploitation of unpatched software", "R-030 Insider data exfiltration", "R-039 Secrets leaked in repositories", "R-049 Session hijacking on public API"], ["R-019 SQL injection / web exploitation", "R-050 Session hijacking on public API"], []], [["R-007 Phishing leading to account takeover", "R-046 Backup destruction / tampering"], [], ["R-051 Session hijacking on public API"], [], []]]};
+const DATA = {"months": ["Nov 25", "Dec 25", "Jan 26", "Feb 26", "Mar 26", "Apr 26", "May 26", "Jun 26", "Jul 26", "Aug 26", "Sep 26", "Oct 26"], "sla": {"Critical": [50.0, 50.0, 50.0, 50.0, 53.8, 53.8, 66.7, 77.8, 92.3, 92.3, 81.2, 75.0], "High": [57.1, 45.8, 45.9, 42.9, 53.5, 58.3, 58.1, 58.3, 65.5, 70.0, 80.0, 85.7], "Medium": [60.9, 50.0, 48.5, 41.5, 47.4, 60.7, 80.0, 89.7, 94.5, 96.4, 97.6, 100.0]}, "mttr": {"Critical": [10.0, 9.0, 8.7, 9.0, 8.4, 8.4, 7.1, 6.3, 4.6, 4.3, 5.6, 6.6], "High": [36.1, 39.7, 39.9, 41.5, 39.0, 37.5, 37.0, 35.6, 31.5, 29.3, 23.9, 20.3], "Medium": [109.4, 116.2, 118.1, 122.8, 112.8, 91.8, 66.0, 56.9, 51.3, 47.3, 44.7, 38.9]}, "aging": {"buckets": ["0-30 days", "31-60 days", "61-90 days", "90+ days"], "data": {"Critical": [0, 0, 0, 0], "High": [2, 1, 1, 0], "Medium": [12, 17, 6, 12]}}, "phishing": {"labels": ["Nov 25", "Dec 25", "Jan 26", "Feb 26", "Mar 26", "Apr 26", "May 26", "Jun 26", "Jul 26", "Aug 26", "Sep 26", "Oct 26"], "click": [24.0, 21.0, 21.2, 19.2, 16.1, 16.3, 16.1, 14.5, 13.0, 13.0, 7.1, 8.5], "report": [9.0, 12.5, 13.8, 15.0, 19.5, 17.7, 20.0, 20.0, 26.1, 29.8, 32.7, 35.7]}, "patch": {"labels": ["Cloud workloads", "Endpoints", "Servers", "Databases", "Network devices"], "values": [4, 7, 14, 17, 26]}, "heat": [[2, 2, 4, 0, 0], [3, 5, 3, 5, 0], [3, 5, 4, 2, 1], [6, 5, 5, 2, 0], [2, 0, 1, 0, 0]], "heatItems": [[["R-009 Exploitation of unpatched software", "R-034 Vendor breach propagating"], ["R-044 DDoS against public services", "R-047 Backup destruction / tampering"], ["R-054 Lost / stolen laptop", "R-057 Business email compromise (BEC)", "R-058 Business email compromise (BEC)", "R-059 Business email compromise (BEC)"], [], []], [["R-013 Ransomware via endpoint compromise", "R-031 Insider data exfiltration", "R-040 Secrets leaked in repositories"], ["R-001 Credential stuffing / password spraying", "R-004 Credential stuffing / password spraying", "R-020 SQL injection / web exploitation", "R-029 Insider data exfiltration", "R-052 Session hijacking on public API"], ["R-035 Vendor breach propagating", "R-037 Secrets leaked in repositories", "R-060 Business email compromise (BEC)"], ["R-022 Privilege escalation in AD", "R-025 Cloud misconfiguration exposure", "R-027 Cloud misconfiguration exposure", "R-038 Secrets leaked in repositories", "R-043 DDoS against public services"], []], [["R-017 SQL injection / web exploitation", "R-018 SQL injection / web exploitation", "R-021 Privilege escalation in AD"], ["R-006 Phishing leading to account takeover", "R-011 Exploitation of unpatched software", "R-016 Ransomware via endpoint compromise", "R-036 Vendor breach propagating", "R-056 Lost / stolen laptop"], ["R-002 Credential stuffing / password spraying", "R-012 Exploitation of unpatched software", "R-032 Insider data exfiltration", "R-048 Backup destruction / tampering"], ["R-033 Vendor breach propagating", "R-042 DDoS against public services"], ["R-055 Lost / stolen laptop"]], [["R-003 Credential stuffing / password spraying", "R-015 Ransomware via endpoint compromise", "R-024 Privilege escalation in AD", "R-041 DDoS against public services", "R-045 Backup destruction / tampering", "R-053 Lost / stolen laptop"], ["R-008 Phishing leading to account takeover", "R-014 Ransomware via endpoint compromise", "R-023 Privilege escalation in AD", "R-026 Cloud misconfiguration exposure", "R-028 Cloud misconfiguration exposure"], ["R-005 Phishing leading to account takeover", "R-010 Exploitation of unpatched software", "R-030 Insider data exfiltration", "R-039 Secrets leaked in repositories", "R-049 Session hijacking on public API"], ["R-019 SQL injection / web exploitation", "R-050 Session hijacking on public API"], []], [["R-007 Phishing leading to account takeover", "R-046 Backup destruction / tampering"], [], ["R-051 Session hijacking on public API"], [], []]], "targets": {"sla": 90, "click": 10, "patch": 14}};
 
 /* ---------- theme ---------- */
 const root = document.documentElement;
@@ -253,6 +260,31 @@ function line(ds, color) {
     pointRadius: 0, pointHoverRadius: 5, pointHoverBorderColor: cssVar('--surface'),
     pointHoverBorderWidth: 2, tension: 0.25, spanGaps: true };
 }
+const targetLine = {
+  id: 'targetLine',
+  afterDatasetsDraw(chart, args, opts) {
+    if (!opts || opts.value == null) return;
+    const { ctx, chartArea, scales } = chart;
+    const horiz = opts.axis === 'x';
+    const scale = horiz ? scales.x : scales.y;
+    const pos = scale.getPixelForValue(opts.value);
+    ctx.save();
+    ctx.strokeStyle = cssVar('--muted'); ctx.lineWidth = 1;
+    ctx.setLineDash([5, 4]);
+    ctx.beginPath();
+    if (horiz) { ctx.moveTo(pos, chartArea.top); ctx.lineTo(pos, chartArea.bottom); }
+    else { ctx.moveTo(chartArea.left, pos); ctx.lineTo(chartArea.right, pos); }
+    ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = cssVar('--muted');
+    ctx.font = '10px system-ui, sans-serif';
+    if (horiz) { ctx.textAlign = 'left'; ctx.fillText(opts.label, pos + 4, chartArea.top + 10); }
+    else { ctx.textAlign = 'right'; ctx.fillText(opts.label, chartArea.right, pos - 4); }
+    ctx.restore();
+  }
+};
+Chart.register(targetLine);
+
 function renderCharts() {
   charts.forEach(c => c.destroy()); charts = [];
   const C = [cssVar('--s1'), cssVar('--s2'), cssVar('--s3')];
@@ -261,7 +293,8 @@ function renderCharts() {
   charts.push(new Chart(slaChart, { type: 'line',
     data: { labels: DATA.months,
       datasets: SEV.map((s, i) => line({ label: s, data: DATA.sla[s] }, C[i])) },
-    options: baseOpts(null, true) }));
+    options: { ...baseOpts(null, true), plugins: { ...baseOpts(null, true).plugins,
+      targetLine: { value: DATA.targets.sla, label: 'target ' + DATA.targets.sla + '%' } } } }));
 
   charts.push(new Chart(mttrChart, { type: 'line',
     data: { labels: DATA.months,
@@ -283,14 +316,16 @@ function renderCharts() {
     data: { labels: DATA.phishing.labels,
       datasets: [ line({ label: 'Click rate', data: DATA.phishing.click }, C[1]),
                   line({ label: 'Report rate', data: DATA.phishing.report }, C[0]) ] },
-    options: baseOpts('%', false) }));
+    options: { ...baseOpts('%', false), plugins: { ...baseOpts('%', false).plugins,
+      targetLine: { value: DATA.targets.click, label: 'click target < ' + DATA.targets.click + '%' } } } }));
 
   charts.push(new Chart(patchChart, { type: 'bar',
     data: { labels: DATA.patch.labels,
       datasets: [{ label: 'Median days', data: DATA.patch.values, backgroundColor: C[0],
         maxBarThickness: 20, borderRadius: { topRight: 4, bottomRight: 4 }, borderSkipped: 'start' }] },
     options: { ...baseOpts(null, false), indexAxis: 'y',
-      plugins: { ...baseOpts(null, false).plugins, legend: { display: false } },
+      plugins: { ...baseOpts(null, false).plugins, legend: { display: false },
+        targetLine: { value: DATA.targets.patch, label: 'target ' + DATA.targets.patch + 'd', axis: 'x' } },
       scales: { x: { grid: { color: cssVar('--grid') }, border: { display: false },
                      ticks: { color: cssVar('--muted'), font: { size: 11 } }, beginAtZero: true,
                      title: { display: true, text: 'days', color: cssVar('--muted'), font: { size: 11 } } },

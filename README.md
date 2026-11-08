@@ -5,6 +5,10 @@ turns raw security data (findings, phishing campaigns, patching records) into an
 executive-ready reporting view. Built to demonstrate how a security team can run a
 metrics and reporting framework without buying a GRC platform.
 
+![build](https://github.com/fsn4k3/risk-kpi-dashboard/actions/workflows/ci.yml/badge.svg)
+
+**[→ Live demo](https://fsn4k3.github.io/risk-kpi-dashboard/)**
+
 ![Dashboard, light mode](docs/screenshot-light.png)
 
 ## What it produces
@@ -13,8 +17,9 @@ A single self-contained `dist/dashboard.html` (no server, no external requests) 
 
 **Executive layer**
 - Auto-generated executive summary paragraph, written from the computed metrics
-- KPI tiles with quarter-over-quarter deltas: SLA compliance, MTTR (High), phishing
-  click rate, median patch latency
+- KPI tiles with quarter-over-quarter deltas and **status against explicit targets**
+  (on target / attention / off target): SLA compliance, MTTR (High), phishing click
+  rate, median patch latency; target reference lines drawn on the trend charts
 - 5×5 **residual risk heatmap** (hover a cell to see the risks in it)
 - Top residual risks table
 
@@ -64,6 +69,23 @@ Risk scoring is a 5×5 likelihood × impact matrix aligned to **ISO 27005 / NIST
   remains after treatment.
 - Colorblind-safe chart palette (validated for deuteranopia/protanopia/tritanopia
   contrast), table fallbacks for every chart, dark mode.
+
+## Tests & CI
+
+KPI rules (SLA definitions, scoring bands, target status) live in `kpis.py` and are
+unit-tested; CI runs the tests, regenerates the data and rebuilds the dashboard on
+every push (`.github/workflows/ci.yml`).
+
+```bash
+pip install pytest
+pytest tests/ -q
+```
+
+## Roadmap
+
+- DORA / NIS2 reporting mapping (incident reporting timelines, ICT risk KPIs)
+- Import adapters for real scanner/ticket exports (Nessus, Jira CSV)
+- Per-owner remediation scorecards
 
 ## License
 
