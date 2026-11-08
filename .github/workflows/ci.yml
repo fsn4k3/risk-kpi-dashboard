@@ -16,7 +16,7 @@ jobs:
       - name: Install dependencies
         run: pip install pandas pytest
       - name: Run tests
-        run: pytest tests/ -q
+        run: python -m pytest tests/ -q
       - name: Generate demo data
         run: python generate_data.py
       - name: Build dashboard
